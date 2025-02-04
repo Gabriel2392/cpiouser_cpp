@@ -88,7 +88,7 @@ int main(int argc, char* argv[]) {
         unsigned long namesize = path.size() + 1; // +1 for null terminator
 
         auto write_field = [&](int offset, unsigned long value) {
-            std::snprintf(header + offset, 9, "%08lx", value);
+            std::snprintf(header + offset, 9, "%08lX", value);
         };
 
         write_field(6,  0);    // ino
